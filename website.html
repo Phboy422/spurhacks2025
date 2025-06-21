@@ -5,6 +5,9 @@
     <link rel="icon" href="website_icon-removebg-preview.png" type="x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AlphaLingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,12 +20,11 @@
             <div class="menu-container">
                 <ul class="menu">
                     <li tabindex="0">
-                        <select id="selected-language" placeholder="Languages">
+                        <select id="selected-language" placeholder="Languages" >
                             <option>Generation X</option>
                             <option>Millennials</option>
                             <option>Generation Z</option>
                             <option>Generation Alpha</option>
-                            <option>Toronto Slang</option>
                         </select>
                     </li>
                 </ul>
@@ -34,8 +36,12 @@
                         <img src="microphone.png" class="microphone" alt="Mic Icon" />
                     </div>
                 </div>
-                <div class="textarea-group">
+
+                <div class="textarea-group with-volume">
                     <textarea placeholder="Translated Text" readonly></textarea>
+                    <div class="mic-wrapper">
+                        <img src="high-volume.png" class="microphone" alt="Volume Icon" />
+                    </div>
                 </div>
             </div>
         </div>
