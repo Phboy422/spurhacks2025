@@ -19,7 +19,6 @@ body, html {
     padding: 0 20px 40px;
 }
 
-
 .wrapper {
     position: relative;
     width: 90%;
@@ -38,7 +37,6 @@ body, html {
     font-size: 12px;
 }
 
-
 .menu {
     list-style: none;
     background: #ffffff;
@@ -51,11 +49,10 @@ body, html {
 
 .menu > li {
     position: relative;
-    padding: 4px 8px;
+    border-radius: 8px;
     cursor: pointer;
     user-select: none;
 }
-
 
 .menu > li p {
     margin: 0;
@@ -63,11 +60,9 @@ body, html {
     font-size: 12px;
 }
 
-
 .menu > li:focus-within .submenu {
     list-style-type: none;
 }
-
 
 .submenu {
     display: none;
@@ -81,7 +76,6 @@ body, html {
     padding: 4px 0;
     z-index: 20;
 }
-
 
 .submenu li {
     padding: 4px 12px;
@@ -124,7 +118,6 @@ h1 {
     margin-bottom: 50px;  
     padding: 0;
     color: #333;
-    background: none; 
     background-color: #f3f3f3;  
 }
 
@@ -136,9 +129,52 @@ h1 {
 }
 
 .topleftimg:hover {
-
     cursor: pointer;
     background-color: #b8b8b86a;
     opacity: 1;
     border-radius: 20px;
+}
+
+/* ===== MIC FEATURE STYLES ===== */
+
+/* No left padding by default so placeholder starts at very left (under mic) */
+.with-mic textarea {
+    padding-left: 12px;
+    padding-bottom: 10px;
+}
+
+/* When user types, add left padding so input text avoids mic */
+.with-mic textarea:not(:placeholder-shown) {
+    padding-left: 50px;
+}
+
+/* Placeholder text flush left, no indent */
+.with-mic textarea::placeholder {
+    text-indent: 0;
+}
+
+/* Mic wrapper positioning and hover circle */
+.with-mic .mic-wrapper {
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.with-mic .mic-wrapper:hover {
+    background-color: #b8b8b86a;
+}
+
+/* Fixed mic icon size */
+.with-mic .microphone {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
 }

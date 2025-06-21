@@ -4,36 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="website_icon-removebg-preview.png" type="x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRANSLATION</title>
+    <title>AlphaLingo</title>
     <link rel="stylesheet" href="style.css" />
-    
 </head>
 <body>
     <a href="website.html">
-    <img src="website_icon-removebg-preview.png" class="topleftimg" alt="Site Icon" />
+        <img src="website_icon-removebg-preview.png" class="topleftimg" alt="Site Icon" />
     </a>
-    <h1>
-        AlphaLingo
-    </h1>
+    <h1>AlphaLingo</h1>
     <div class="container">
         <div class="wrapper">
             <div class="menu-container">
                 <ul class="menu">
                     <li tabindex="0">
-                        <p id="selected-language">Languages</p>
-                        <ul class="submenu">
-                            <li class="language-option">Generation X</li>
-                            <li class="language-option">Millennials</li>
-                            <li class="language-option">Generation Z</li>
-                            <li class="language-option">Generation A</li>
-                            <li class="language-option">Toronto Slang</li>
-                        </ul>
+                        <select id="selected-language" placeholder="Languages">
+                            <option>Generation X</option>
+                            <option>Millennials</option>
+                            <option>Generation Z</option>
+                            <option>Generation Alpha</option>
+                            <option>Toronto Slang</option>
+                        </select>
                     </li>
                 </ul>
             </div>
             <div class="input">
-                <div class="textarea-group">
+                <div class="textarea-group with-mic">
                     <textarea placeholder="Input Text" autofocus autocomplete="off"></textarea>
+                    <div class="mic-wrapper">
+                        <img src="microphone.png" class="microphone" alt="Mic Icon" />
+                    </div>
                 </div>
                 <div class="textarea-group">
                     <textarea placeholder="Translated Text" readonly></textarea>
