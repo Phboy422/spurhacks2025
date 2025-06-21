@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="website_icon-removebg-preview.png" type="x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TRANSLATION</title>
     <link rel="stylesheet" href="style.css" />
+    
 </head>
 <body>
+    <a href="website.html">
+    <img src="website_icon-removebg-preview.png" class="topleftimg" alt="Site Icon" />
+    </a>
     <h1>
         Genz translator
     </h1>
@@ -15,11 +20,11 @@
             <div class="menu-container">
                 <ul class="menu">
                     <li tabindex="0">
-                        <p>Languages</p>
+                        <p id="selected-language">Languages</p>
                         <ul class="submenu">
-                            <li>Generation Alpha</li>
-                            <li>Generation Z</li>
-                            <li>Toronto Slang</li>
+                            <li class="language-option">Generation Alpha</li>
+                            <li class="language-option">Generation Z</li>
+                            <li class="language-option">Toronto Slang</li>
                         </ul>
                     </li>
                 </ul>
@@ -35,4 +40,5 @@
         </div>
     </div>
 </body>
+<script src="scripts.js"></script>
 </html>

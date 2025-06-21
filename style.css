@@ -64,10 +64,8 @@ body, html {
 }
 
 
-.menu > li:hover .submenu,
 .menu > li:focus-within .submenu {
     list-style-type: none;
-    display: block;
 }
 
 
@@ -128,4 +126,19 @@ h1 {
     color: #333;
     background: none; 
     background-color: #f3f3f3;  
+}
+
+.topleftimg {
+    width: 43px;
+    height: 43px;
+    padding: 8px;
+    margin: 12px;
+}
+
+.topleftimg:hover {
+
+    cursor: pointer;
+    background-color: #b8b8b86a;
+    opacity: 1;
+    border-radius: 20px;
 }
