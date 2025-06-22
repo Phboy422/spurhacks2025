@@ -1,13 +1,10 @@
 import google.generativeai as genai
-
+import pyttsx3
 
 genai.configure(api_key="AIzaSyAcFinpP0bU8C3b6mEEV4gYm9GL44zwyak")
 
-
-x, y, z, a, e = False, False, False, False, False
-
 def brt(g, t):
-    global x, y, z, a, e 
+    x = y = z = a = e = False
 
     if g == 'x': x = True
     if g == 'y': y = True
@@ -31,9 +28,20 @@ def brt(g, t):
         return "Invalid generation."
 
     response = model.generate_content(prompt)
-
     o = response.text.strip().replace('"', '')
     return o
+
+def tts(text, filename="output.wav"):
+    engine = pyttsx3.init()
+    engine.save_to_file(text, filename)
+    engine.runAndWait()
+    print(f"WAV file saved as {filename}")
+
+g = input("Give a letter (x, y, z, a, e): ").lower()
+t = input("Give a sentence: ")
+result = brt(g, t)
+print(result)
+tts(result)
 
 g = input("Give a letter (x, y, z, a, e): ").lower()
 t = input("Give a sentence: ")
